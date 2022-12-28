@@ -1,0 +1,588 @@
+:root {
+    --royal:rgb(14, 87, 160);
+    --celeste:rgb(60, 141, 223) ;
+    --plata:rgb(242, 242, 242);
+    --ambar:rgb(255, 248, 128);
+    --anaranjado:rgb(255, 176, 0);
+    --rojo:rgb(170, 0, 0);
+    --blanco:white;
+    --cafe:rgb(36, 31, 28);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+}
+
+.fondo {
+    height:100%;
+    width: 100%;
+    position: fixed;
+    object-fit:cover;
+    z-index: -1;
+}
+
+.header {
+    width: 100%;
+    background-color: var(--royal);
+    height: 5.625em;
+    position: fixed;
+    top:0;
+    border-bottom: 0.4375em solid var(--anaranjado);
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0.3125em 0.625em rgba(19, 19, 19, 0.24);
+    z-index: 3;
+}
+
+.header__menu {
+    display: none;
+}
+
+.header__nav {
+    margin: 0 auto;
+    max-width: 76em;
+    width: 100%;
+    height: 5em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    justify-items: center;
+}
+
+/* Espacio de la barra de busqueda */
+
+.nav__buscador {
+    position: relative;
+}
+
+.nav__buscar{
+    position: absolute;
+    width: 1.4em;
+    right: 0.5em;
+    top: 0.3em;
+}
+
+/* Espacio del menú principal */
+
+.nav__ul {
+    display:flex;
+    list-style: none;
+}
+
+.nav__ul>li {
+    padding: 0.3125em 0.9375em;
+    margin: 0.3125em 0.625em;
+    cursor: pointer;
+    border-radius: 0.4375em;
+}
+
+.nav__ul>li:hover {
+    background-color: var(--celeste);
+    border-radius: 0.4375em;
+    box-shadow: 0.1875em 0.1875em 0.1875em rgba(19, 19, 19, 0.24);
+    transition: all ease-out 0.3s;
+}
+
+/* Distanciamiento de los iconos de Flaticon */
+
+.fi {
+    margin: 5em 0.5em 0 0;
+}
+
+.nav__enlace,
+.fi-br-menu-burger,
+.header__enlace {
+    color: var(--blanco);
+}
+
+/* Caracteristicas de la barra de busqueda */
+
+.nav__barra {
+    font-family: DM sans;
+    font-weight: 400;
+    color:grey;
+    width: 15.625em;
+    height: 2.5em;
+    border-radius: 1.25em;
+    border-style: none;
+    padding-left: 0.9375em;
+    outline: none;
+}
+
+/* .nav__entrar {
+    display: flex;
+    background-color: var(--blanco);
+    border-radius: 1.25em;
+    width: 6.25em;
+    height: 2.1875em;
+    box-shadow: 0.1875em 0.1875em 0.1875em rgba(19, 19, 19, 0.24);
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.nav__enlace-entrar {
+    color: var(--cafe);
+    font-weight: 600;
+}
+
+.nav__entrar>.fi {
+    color: var(--anaranjado);
+    font-size: 1.2em;
+    margin-top: 0.3125em;
+} */
+
+/* Caracteristica de la barra de las Redes Sociales */
+
+.redes {
+    position: fixed;
+    z-index: 4;
+    right: 0.900em;
+    top: 35%;
+}
+
+.redes__lista>li {
+    list-style: none;
+    width: 2em;
+}
+
+.redes__a {
+    color: var(--blanco);
+    font-size: 2em;
+    padding: 0;
+}
+
+.redes__a:hover {
+    color: var(--anaranjado);
+    transition: all ease 0.3s;
+}
+
+.redes__lista {
+    display: flex;
+    flex-direction: column;
+    background-color:var(--royal);
+    padding: 0.5em;
+    border-radius: 2em;
+}
+
+
+/* Características del Submenú */
+
+
+.submenu {
+    margin:auto;
+    width: 100%;
+    height: 2.5em;
+    display: flex;
+    background-color: var(--celeste);
+    position: sticky;
+    top: 5.625em;
+    justify-content: center;
+    align-items: center;
+}
+
+.submenu__ul{
+    display: flex;
+    list-style: none;
+    width: 75em;
+    justify-content: space-between;
+    margin: 0.5em auto;
+    position: relative;
+}
+
+.submenu__a {
+    position: relative;
+    text-decoration: none;
+    color: var(--blanco);
+    padding: 0.5em 1em;
+    font-weight: 400;
+}
+
+/* Animación relleno a los enlaces del submenu */
+
+.submenu__a::after {
+    content:'';
+    width: 100%;
+    height: 1.7em;
+    border-radius: 0.3125em;
+    background-color:var(--royal);
+    position: absolute;
+    left: 0;
+    bottom: 0.25em;
+    transform:scale(0, 1);
+    transition: transform 0.2s ease-out;
+    z-index: -1;
+}
+
+.activa {
+    font-weight: bold;
+    border-radius: 7px;
+    border: 3px solid var(--anaranjado);
+}
+
+.submenu__a:hover::after{
+    transform: scale(1, 1);
+}
+
+/* Caracteristicas para el contenido en general */
+
+.contenidogeneral {
+    background-color: rgb(255, 255, 255, 0.5);
+    max-width: 75em;
+    width: 100%;
+    margin: 7em auto 1em;
+    position: relative;
+    padding: 1em 2em;
+    border-radius: 0.8em;
+    z-index: -1;
+}
+
+/* -----------Caracteristicas generales para cada página ---------------------*/
+
+
+/* Nuestro Personal */
+
+.docente{
+    display: flex;
+    margin: 0 auto;
+    padding:  0 1em;
+    justify-content: space-between;
+    align-items: center;
+    border: solid 0.2em var(--plata);
+    border-radius: 1em;
+}
+.docente__img{
+    width: fit-content;
+    border-radius: 50%;
+    margin: 1em auto;
+    border: 1em solid var(--blanco);
+    box-shadow: 1em 0.5em 1em rgba(19, 19, 19, 0.1);
+}
+
+.docente__perfil{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: auto;
+    padding: 2em;
+    margin: 0 2em;
+    width: 100%;
+}
+
+.docente__nombre{
+    font-size: 3em;
+    color: var(--rojo);
+}
+
+.docente__biografia {
+    width: 100%;
+}
+
+.separador {
+    max-width: 70em;
+    width: 90%;
+    margin: 1em auto;
+    height: 0.2em;
+    border-radius: 50%;
+    background-color: var(--anaranjado);
+}
+
+/* Termina Nuestro Personal */
+
+/* Normatividad */
+
+.fundamentos__titulo,
+.principios__titulo,
+.mconvivencia__titulo {
+    font-size: 3em;
+    color: var(--royal);
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.principios__subtitulo,
+.fundamentos__subtitulo,
+.mconvivencia__subtitulo {
+    color: var(--anaranjado);
+    text-transform:capitalize;
+    font-weight: 600;
+    font-size: 2em;
+}
+
+.principios,
+.fundamentos,
+.mconvivencia {
+    padding-bottom: 5em;
+}
+
+.principios ol li,
+.fundamentos ol li {
+    list-style-type:upper-latin;
+    padding-top: 1em;
+    margin-left: 1em;
+    list-style-position: inside;
+}
+
+.mconvivencia__lista {
+    color: var(--celeste);
+    list-style: inside;
+    font-size: 1.5em;
+}
+
+.mconvivencia__texto,
+.fundamentos__texto {
+    text-align: justify;
+}
+
+/* Termina Normatividad */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Página en construcción */
+
+.no-page {
+    object-fit: cover;
+}
+
+.pagconstruccion {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Caracteristicas del Footer */
+
+.footer {
+    width: 100%;
+    height: 10em;
+    background-color: var(--royal);
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer__col {
+    margin: 1em;
+}
+
+.footer__ul {
+    list-style: none;
+    text-align: center;
+}
+
+.footer__li {
+    color: var(--plata);
+}
+
+.footer__img {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 15em;
+}
+
+.subtitulo {
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+/* Aquí terminan las caracteristicas generales para cada página */
+
+
+
+/* Responsive Web */
+
+@media screen and (max-width:1080px){
+   
+    .fondo,
+    .portada {
+        display: none;
+    }
+
+    .principal h1 {
+        color: var(--royal);
+        font-size: 5em;
+    }
+
+    .escudo {
+        width: 100%;
+        margin: 4em auto;
+    }
+
+    /* Responsive - Nuestro Personal */
+
+}
+
+@media screen and (max-width:960px){
+    .nav,
+    .degradado {
+        display: none;
+    }
+
+    .header__toggle {
+        background-color: transparent;
+        border: 0;
+        font-size: 1em;
+        padding: 0;
+        margin: 0;
+    }
+
+    .submenu {
+        position:fixed;
+        right: 100%;
+        top: 2em;
+        z-index: 2;
+        height: 100%;
+        transition: all ease 0.5s;
+    }
+
+    .toggle-activo{
+        right: 0;
+    }
+
+    .submenu__ul {
+        flex-direction: column;
+        align-items: center;
+        font-size: 2em;
+    }
+
+    .submenu__ul li{
+        margin: 0.5em;
+    }
+
+    .header__menu {
+        display: flex;
+        max-width: 20em;
+        width: 100%;
+        justify-content: space-around;
+        margin: auto;
+        font-size: 2.3em;
+    }
+
+    .footer {
+        flex-direction: column;
+        height: fit-content;
+        padding-bottom: 2em;
+        align-content: center;
+        margin: auto;
+        align-items: center;
+    }
+
+    /* Responsive - Nuestro Personal */
+
+    .docente {
+        flex-direction: column;
+    }
+
+    .docente__perfil {
+        width: 100%;
+        text-align: justify;
+        padding: 0 0 1em 0;
+    }
+
+    .docente__nombre {
+        text-align: center;
+        font-size: 1.8em;
+    }
+
+    .docente__img {
+        width: 100%;
+    }
+    /* Responsive - Construyendo */
+
+    .no-page {
+        width: 90%;
+    }
+
+    /* Responsive - Normatividad */
+
+    .contnormatividad {
+        width: 80%;
+        margin: auto;
+    }
+
+}
+
+@media screen and (max-width:500px){
+
+    /* Responsive General*/
+
+    .header__enlace,
+    .header__toggle {
+        font-size: 0.7em;
+    }
+
+    .redes__lista {
+        border-radius: 0;
+        width: 100%;
+        flex-direction: row;
+        position: fixed;
+        bottom: 0%;
+        margin: auto;
+        left: 0%;
+        padding: 0.5em 1em 0;
+        justify-content: space-between;
+    }
+
+    .submenu__a {
+        font-size: 0.7em;
+    }
+
+    .footer {
+        height: 32em;
+    }
+
+/* Responsive para Nuestra Personal */
+
+    .docente__nombre {
+        margin-top: 0;
+    }
+
+/* Responsive para Normatividad */
+
+    .contnormatividad {
+        width: 100%;
+    }
+
+    .mconvivencia__titulo,
+    .principios__titulo,
+    .fundamentos__titulo {
+        font-size: 2em;
+    }
+
+    .mconvivencia__subtitulo {
+        font-size: 1.5em;
+        padding-top: 1em;
+    }
+
+    .mconvivencia__lista,
+    .fundamentos__subtitulo,
+    .principios__subtitulo {
+        padding: 1em 0;
+        font-size: 1.2em;
+    }
+
+
+}

@@ -1,0 +1,698 @@
+:root {
+    --royal:rgb(14, 87, 160);
+    --celeste:rgb(60, 141, 223) ;
+    --plata:rgb(242, 242, 242);
+    --ambar:rgb(255, 248, 128);
+    --anaranjado:rgb(255, 176, 0);
+    --rojo:rgb(170, 0, 0);
+    --blanco:white;
+    --cafe:rgb(36, 31, 28);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+}
+
+.fondo {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    object-fit:cover;
+    z-index: -1;
+}
+
+.portada {
+    position: absolute;
+    top: 5.1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 100%;
+}
+
+.header {
+    width: 100%;
+    background-color: var(--royal);
+    height: 5.625em;
+    position: fixed;
+    top:0;
+    border-bottom: 0.4375em solid var(--anaranjado);
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0.3125em 0.625em rgba(19, 19, 19, 0.24);
+    z-index: 3;
+}
+
+.header__menu {
+    display: none;
+}
+
+
+.header__nav {
+    margin: 0 auto;
+    max-width: 76em;
+    width: 100%;
+    height: 5em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    justify-items: center;
+}
+
+/* Espacio de la barra de busqueda */
+
+.nav__buscador {
+    position: relative;
+}
+
+.nav__buscar{
+    position: absolute;
+    width: 1.4em;
+    right: 0.5em;
+    top:0.3em;
+}
+
+/* Espacio del menú principal */
+.nav__ul {
+    display:flex;
+    list-style: none;
+}
+
+.nav__ul>li {
+    padding: 0.3125em 0.9375em;
+    margin: 0.3125em 0.625em;
+    cursor: pointer;
+    border-radius: 0.4375em;
+}
+
+.nav__ul>li:hover {
+    background-color: var(--celeste);
+    border-radius: 0.4375em;
+    box-shadow: 0.1875em 0.1875em 0.1875em rgba(19, 19, 19, 0.24);
+    transition: all ease-out 0.3s;
+}
+
+/* Distanciamiento de los iconos de Flaticon */
+.nav__enlace .fi,
+.contactanos__section .fi {
+    margin: 5em 0.5em 0 0;
+}
+
+.nav__enlace,
+.fi-br-menu-burger,
+.header__enlace {
+    color: var(--blanco);
+}
+
+/* Caracteristicas de la barra de busqueda */
+.nav__barra {
+    font-family: DM sans;
+    font-weight: 400;
+    color:grey;
+    width: 15.625em;
+    height: 2.5em;
+    border-radius: 1.25em;
+    border-style: none;
+    padding-left: 0.9375em;
+    outline: none;
+}
+
+/* .nav__entrar {
+    display: flex;
+    background-color: var(--blanco);
+    border-radius: 1.25em;
+    width: 6.25em;
+    height: 2.1875em;
+    box-shadow: 0.1875em 0.1875em 0.1875em rgba(19, 19, 19, 0.24);
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.nav__enlace-entrar {
+    color: var(--cafe);
+    font-weight: 600;
+}
+
+.nav__entrar>.fi {
+    color: var(--anaranjado);
+    font-size: 1.2em;
+    margin-top: 0.3125em;
+} */
+
+/* Caracteristica de la barra de las Redes Sociales */
+
+.redes {
+    position: fixed;
+    z-index: 4;
+    right: 0.900em;
+    top: 35%;
+}
+
+.redes__lista li {
+    position: relative;
+    list-style: none;
+}
+
+.redes__a {
+    color: var(--blanco);
+    font-size: 2em;
+}
+
+.redes__a:hover {
+    color: var(--anaranjado);
+    transition: all ease 0.3s;
+}
+
+.redes__lista {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    margin: auto;
+    height: fit-content;
+    background-color:var(--royal);
+    padding: 0.5em;
+    border-radius: 2em;
+}
+
+/* Caracteristica del Escudo y Bienvenida */
+
+.principal {
+    width: 90%;
+    max-width: 93.75em;
+    margin: 2em auto 1em;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    align-content: center;
+    position: relative;
+    z-index: 2;
+}
+
+.escudo {
+    width: 31.25em;
+    padding: 2em 1.25em;
+    margin: 5em auto 3em;
+}
+
+.principal__section>img {
+    width: 80%;
+    position: relative;
+    left: 10%;
+    top: -1.25em;
+    margin: auto;
+}
+
+.principal__section>h1 {
+    font-size: 6em;
+    text-align: center;
+    color: var(--blanco);
+    text-shadow: 5px 5px 10px rgba(19, 19, 19, 0.24);
+}
+
+.principal__section>p {
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    background-color:rgba(255, 255, 255, 0.8);
+    border-radius: 0.4375em;
+    padding:1em;
+    font-size: 1.2em;
+}
+
+.degradado {
+    top: -6.25em;
+    position: absolute;
+    height: 6.25em;
+    width: 100%;
+    background: rgb(60,141,223);
+    background: linear-gradient(360deg, rgba(60,141,223,1) 0%, rgba(255,255,255,0) 100%); 
+}
+
+/* Caracteristicas del Submenu */
+
+.submenu {
+    margin: auto;
+    width: 100%;
+    height: 2.5em;
+    display: flex;
+    background-color: var(--celeste);
+    position: sticky;
+    top: 5.625em;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.submenu__ul{
+    display: flex;
+    list-style: none;
+    max-width: 75em;
+    width: 100%;
+    justify-content: space-between;
+    margin: 0.5em auto;
+    position: relative;
+}
+
+.submenu__a {
+    position: relative;
+    text-decoration: none;
+    color: var(--blanco);
+    padding: 0.5em 1em;
+    font-weight: 400;
+}
+
+/* Animación relleno a los enlaces del submenu */
+
+.submenu__a::after {
+    content:'';
+    width: 100%;
+    height: 1.7em;
+    border-radius: 0.3125em;
+    background-color:var(--royal);
+    position: absolute;
+    left: 0;
+    bottom: 0.25em;
+    transform:scale(0, 1);
+    transition: transform 0.2s ease-out;
+    z-index: -1;
+}
+
+.submenu__a:hover::after {
+    transform: scale(1, 1);
+}
+
+/* Contenido debajo del submenu y contenedores de la página Home*/
+
+.aja {
+    background-color: rgb(255, 255, 255, 0.5);
+    max-width: 75em;
+    width: 90%;
+    margin: 1em auto;
+    position: relative;
+    padding: 1em 2em;
+    border-radius: 0.8em;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
+.contenedor {
+    width: 90%;
+    margin: 5em auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.myv__titulo {
+    font-size: 5em;
+    color: var(--anaranjado);
+}
+
+.myv__texto {
+    text-align: justify;
+}
+
+.contenedor__img {
+    width: 100%;
+    max-width: 20em;
+    padding-right: 3em ;
+}
+
+/* Contenido para Historia */
+
+.historia {
+    max-width: 55em;
+    width: 100%;
+    margin: 5em auto;
+}
+
+.historia__img {
+    display: flex;
+    justify-content: center;
+}
+
+.historia__titulo {
+    font-size: 5em;
+    text-align: center;
+    color: var(--royal);
+}
+
+.historia__texto {
+    text-align: justify;
+}
+
+/* Características del Formulario de Contacto */
+
+.contactanos {
+    width: 100%;
+    max-width: 65em;
+    background-color:var(--plata);
+    margin: 5em auto 2em;
+    position: relative;
+    padding: 2em;
+    height: 30em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0.4375em;
+}
+
+.contactanos__a {
+    width: 20em;
+    padding: 0.5em;
+}
+
+.contactanos__h1 {
+    font-size: 2.5em;
+    color: var(--anaranjado);
+}
+
+.contactanos__parrafo {
+    text-align: justify;
+    max-width: 31.25em;
+    padding-bottom: 1em;
+}
+
+.contactanos__section>ul>li{
+    list-style: none;
+    padding: 0.3em;
+}
+
+.contactanos__icon {
+    color: var(--cafe);
+    font-weight: 600;
+}
+
+.contactanos__icon>i{
+    color:var(--royal);
+    font-size: 1.2em;
+}
+
+.contactanos__form {
+    width: 100%;
+    max-width: 30em;
+    padding-left: 2em;
+    height: fit-content;
+}
+
+.campo {
+    width: 100%;
+    height: 3em;
+    margin: 0.5em 0;
+    border-radius: 0.4375em;
+    padding: 0.5em;
+    border: none;
+    font-family: Dm sans, Helvetica;
+}
+
+.campotext {
+    width: 100%;
+    height: 100%;
+    max-height: 9.375em;
+    padding: 0.5em;
+    border: none;
+    font-family: Dm sans, Helvetica;
+    border-radius: 0.4375em;
+    margin: 1em auto 2em;
+    font-size: 0.88em;
+    
+}
+
+.btn-enviar {
+    border: none;
+    background-color: var(--ambar);
+    width: 100%;
+    padding: 0.5em;
+    float: right;
+    font-family: DM sans;
+    font-size: 1.1em;
+    border-radius: 0.4375em;
+}
+
+.btn-enviar:hover {
+    background-color: var(--anaranjado);
+    transition: all ease 0.5s;
+    color: var(--blanco);
+    font-weight: 600;
+}
+
+/* Caracteristicas del Footer */
+
+.footer {
+    width: 100%;
+    background-color: var(--royal);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.footer__col {
+    margin: 1em;
+
+}
+
+.footer__ul {
+    list-style: none;
+    text-align: center;
+}
+
+.footer__li {
+    color: var(--plata);
+}
+
+.footer__img {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    max-width: 15em;
+}
+
+.subtitulo {
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+
+/* Responsive Web */
+
+@media screen and (max-width:1080px){
+   
+    .fondo,
+    .portada {
+        display: none;
+    }
+
+    .principal h1 {
+        color: var(--royal);
+        font-size: 5em;
+    }
+
+    .escudo {
+        width: 100%;
+        margin: 4em auto;
+    }
+
+}
+
+@media screen and (max-width:960px){
+    .nav,
+    .degradado {
+        display: none;
+    }
+
+    .header__toggle {
+        background-color: transparent;
+        border: 0;
+        font-size: 1em;
+        padding: 0;
+        margin: 0;
+    }
+
+    .submenu {
+        position:fixed;
+        right: 100%;
+        top: 2em;
+        z-index: 2;
+        height: 100%;
+        transition: all ease 0.5s;
+    }
+
+    .toggle-activo{
+        right: 0;
+    }
+
+    .submenu__ul {
+        flex-direction: column;
+        align-items: center;
+        font-size: 2em;
+    }
+
+    .submenu__ul li{
+        margin: 0.5em;
+    }
+
+    .header__menu {
+        display: flex;
+        max-width: 20em;
+        width: 100%;
+        justify-content: space-around;
+        margin: auto;
+        font-size: 2.3em;
+    }
+
+    .escudo {
+        margin: 6em auto 1em;
+        padding: 0;
+    }
+
+    .principal h1{
+        font-size: 4em;
+    }
+
+    .principal__section p{
+        font-size: 1em;
+    }
+
+    .contenedor {
+        flex-direction: column;
+    }
+
+    .contenedor__img {
+        width: 100%;
+        padding-right: 0;
+    }
+
+    .myv__titulo {
+        text-align: center;
+    }
+
+    .historia__titulo,
+    .myv__titulo {
+        font-size: 3em;
+    }
+
+    .footer {
+        flex-wrap: wrap;
+        height: fit-content;
+        padding-bottom: 2em;
+    }
+
+    .principal {
+        flex-direction: column;
+    }
+
+    .escudo {
+        max-width: 70%;
+    }
+
+    .contactanos {
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .contactanos__form {
+        padding: 0;
+    }
+
+    .campo {
+        margin: 1em auto;
+        width: 100%;
+    }
+
+    .campotext {
+        margin: auto;
+        width: 100%;
+    }
+
+    .btn-enviar {
+        margin-top: 1em;
+    }
+
+
+}
+
+@media screen and (max-width:500px){
+
+    /* Responsive General */
+
+    .header__enlace,
+    .header__toggle {
+        font-size: 0.7em;
+    }
+
+    .redes__lista {
+        border-radius: 0;
+        width: 100%;
+        flex-direction: row;
+        position: fixed;
+        bottom: 0%;
+        margin: auto;
+        left: 0%;
+        padding: 0.5em 1em 0;
+        justify-content: space-between;
+    }
+
+    .footer {
+        height: 32em;
+    }
+
+        /* Responsive para Index */
+
+
+    .escudo {
+        width: 100%;
+        margin: 5em 0 1em;
+        padding: 0;
+    }
+
+    .principal {
+        width: 100%;
+    }
+
+    .principal__section h1 {
+        font-size: 3em;
+        padding-bottom: 0.2em;
+    }
+
+    .principal__section p {
+        width: 90%;
+        text-align: justify;
+    }
+
+    .submenu__a {
+        font-size: 0.7em;
+    }
+
+    .aja,
+    .contenedor {
+        width: 100%;
+    }
+
+    .contactanos {
+        width: 100%;
+        padding: 2em auto;
+        margin: 1em auto;
+    }
+
+    .contactanos__form,
+    .campo {
+        width: 100%;
+    }
+
+}
