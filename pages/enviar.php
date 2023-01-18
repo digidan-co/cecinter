@@ -8,9 +8,10 @@ $destinatario = "cec.interamericano@gmail.com";
 $asunto = "$asunto";
 
 $carta = "De: $nombre \n";
+$carta .= "Correo: $correo \n";
 $carta .= "Asunto: $asunto \n";
 $carta .= "Contenido: $contenido \n";
 
-mail($destinatario, $asunto, $carta);
+mail($destinatario, $correo, $asunto, $carta);
 header('Location:../index.html')
 ?>
