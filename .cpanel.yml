@@ -2,4 +2,4 @@ deployment:
 deployment:
   tasks:
     - export DEPLOYPATH=/home/cecinter/public_html/
-    - /bin/rsync -av /repositories/cecinter/ $DEPLOYPATH
+    - /bin/rsync -av /home3/cecinter/repositories/cecinter $DEPLOYPATH
