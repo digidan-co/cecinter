@@ -75,6 +75,7 @@ body {
 
 .nav__buscador {
     position: relative;
+    opacity: 0;
 }
 
 .nav__buscar{
@@ -128,6 +129,8 @@ body {
     padding-left: 0.9375em;
     outline: none;
 }
+
+/* Caracteristicas del Login Boton */
 
 /* .nav__entrar {
     display: flex;

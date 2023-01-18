@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>Ingreso de Datos</title>
+    <link rel="shortcut icon" href="img/iconos/favicon.png">
+</head>
+<body>
+    <main class="main">
+        <div class="membrete"><img src="img/membrete.png" alt="Membrete del Colegio"></div>
+        <h1 class="titulo">Formulario de Inscripción - F-A01</h1>
+
+        <form class="formulario">
+            <fieldset class="formulario__estudiante">
+                <legend class="grupo__titulo">Datos del Estudiante</legend>
+
+                <div class="estudiante__codigo">
+                    <label for="codigo">Código:</label>
+                    <input type="text" class="codigo" id="codigo" disabled>
+                </div>
+
+                <div class="estudiante__grado" id="estudiante__grado">
+                    <span class="estudiante__grado-texto">Grado a cursar:</span>
+                    <select id="gradolista" class="gradolista" name="gradolista" required>
+                        <option value="parvulo">Párvulo</option>
+                        <option value="prejardin">Prejardín</option>
+                        <option value="jardin">Jardín</option>
+                        <option value="transicion">Transición</option>
+                        <option value="primero">1er Grado</option>
+                        <option value="segundo">2do Grado</option>
+                        <option value="tercero">3er Grado</option>
+                        <option value="cuarto">4to Grado</option>
+                        <option value="quinto">5to Grado</option>
+                    </select>
+                </div>
+
+                <div class="estudiante__apellidos">
+                    <label for="apellidos">1. Apellidos:</label>
+                    <input type="text" class="apellidos" id="apellidos" name="apellidos" required>
+                </div>
+
+                <div class="estudiante__nombres">
+                    <label for="nombres">2. Nombres:</label>
+                    <input type="text" class="nombres" id="nombres" name="nombres"required>
+                </div>
+
+                <div class="estudiante__tdoc">
+                    <label for="tdoc">3. Tipo de Documento:</label>
+                    <input type="text" class="tdoc" id="tdoc" name="tdoc" list="tdoc-list"required>
+                    <datalist id="tdoc-list">
+                        <option value="rc">RC</option>
+                        <option value="ti">TI</option>
+                        <option value="pp">PP</option>
+                        <option value="pap">PAP</option>
+                    </datalist>
+                </div>
+
+                <div class="estudiante__numero">
+                    <label for="numero">4. Número:</label>
+                    <input type="number" class="numero" id="numero" name="numero"required>
+                </div>
+
+                <div class="estudiante__gs">
+                    <label for="gs">5. Grupo Sanguíneo y RH:</label>
+                    <input type="text" class="gs" id="gs" name="gs"required>
+                </div>
+
+                <div class="estudiante__sexo">
+                    <label for="sexo">6. Sexo:</label>
+                    <input type="text" class="sexo" id="sexo" name="sexo" list="sexo-list"required>
+                    <datalist id="sexo-list">
+                        <option value="Masculino">Masculino</option>
+                        <option value="Femenino">Femenino</option>
+                    </datalist>
+                </div>
+
+                <div class="estudiante__fnacimiento">
+                    <label for="fnacimiento">7. Fecha de Nacimiento:</label>
+                    <input type="date" class="fnacimiento" id="fnacimiento" name="fnacimiento"required>
+                </div>
+
+                <div class="estudiante__lnacimiento">
+                    <label for="lnacimiento">8. Lugar de Nacimiento:</label>
+                    <input type="text" class="lnacimiento" id="lnacimiento" name="lnacimiento"required>
+                </div>
+
+                <div class="estudiante__direccion">
+                    <label for="direccion">9. Dirección:</label>
+                    <input type="text" class="direccion" id="direccion" name="direccion"required>
+                </div>
+
+                <div class="estudiante__barrio">
+                    <label for="barrio">10. Barrio:</label>
+                    <input type="text" class="barrio" id="barrio" name="barrio">
+                </div>
+
+                <div class="estudiante__zona">
+                    <label for="zona">11. Zona:</label>
+                    <input type="text" class="zona" id="zona" list="etnia-list" name="zona"required>
+                    <datalist id="etnia-list">
+                        <option value="Rural">Rural</option>
+                        <option value="Urbana">Urbana</option>
+                    </datalist>
+                </div>
+
+                <div class="estudiante__etnia">
+                    <label for="etnia">12. Etnia:</label>
+                    <input type="text" class="etnia" id="etnia" name="etnia">
+                </div>
+
+                <div class="estudiante__colpro">
+                    <label for="colpro">13. Colegio de Procedencia:</label>
+                    <input type="text" class="colpro" id="colpro" name="colpro">
+                </div>
+
+                <div class="estudiante__municipio">
+                    <label for="municipio">14. Municipio/Ciudad:</label>
+                    <input type="text" class="municipio" id="municipio" name="municipio">
+                </div>
+
+                <div class="estudiante__eps">
+                    <label for="eps">15. EPS:</label>
+                    <input type="text" class="eps" id="eps" name="eps" required>
+                </div>
+
+                <div class="estudiante__gsisben">
+                    <label for="gsisben">16. Grupo Sisben:</label>
+                    <input type="text" class="gsisben" id="gsisben" name="gsisben"required>
+                </div>
+
+                <div class="estudiante__email">
+                    <label for="email">17. Correo Electrónico:</label>
+                    <input type="email" class="email" id="email" name="email"required>
+                </div>
+
+                <div class="espaceador">
+                
+                </div>
+
+        </fieldset>
+
+<!-- Formulario de Datos Familiares -->
+
+        <fieldset class="formulario__datosfamiliares">
+            <legend class="grupo__titulo">Datos Familiares</legend>
+
+            <div class="padre">
+
+                <div class="padre__nombre">
+                    <label for="npadre">18. Nombre completo del Padre:</label>
+                    <input type="text" class="npadre" id="npadre" name="npadre">
+                </div>
+
+                <div class="padre__identificacion">
+                    <label for="pidentificacion">19. Número de Identificación:</label>
+                    <input type="number" class="pidentificacion" id="pidentificacion" name="pidentificacion">
+                </div>
+
+                <div class="padre__profesión">
+                    <label for="pprofesión">20. Ocupación o Profesión:</label>
+                    <input type="text" class="pprofesion" id="pprofesion" name="pprofesion">
+                </div>
+
+                <div class="padre__telefono">
+                    <label for="ptelefono">21. Número de Teléfono:</label>
+                    <input type="number" class="ptelefono" id="ptelefono" name="ptelefono">
+                </div>
+
+                <div class="padre__telegram">
+                    <label for="ptelegram">22. ¿Telegram?:</label>
+                    <input type="checkbox" class="ptelegram" id="ptelegram" name="ptelegram">
+                </div>
+
+            </div>
+
+            <div class="madre">
+                
+                <div class="madre__nombre">
+                    <label for="nmadre">23. Nombre completo de la madre:</label>
+                    <input type="text" class="nmadre" id="nmadre" name="nmadre">
+                </div>
+
+                <div class="madre__identificacion">
+                    <label for="midentificacion">24. Número de Identificación:</label>
+                    <input type="number" class="midentificacion" id="midentificacion" name="midentificacion">
+                </div>
+
+                <div class="madre__profesión">
+                    <label for="mprofesión">25. Ocupación o Profesión:</label>
+                    <input type="text" class="mprofesion" id="mprofesion" name="mprofesion">
+                </div>
+
+                <div class="madre__telefono">
+                    <label for="mtelefono">26. Número de Teléfono:</label>
+                    <input type="number" class="mtelefono" id="mtelefono" name="mtelefono">
+                </div>
+
+                <div class="madre__telegram">
+                    <label for="mtelegram">27. ¿Telegram?:</label>
+                    <input type="checkbox" class="mtelegram" id="mtelegram" name="mtelegram">
+                </div>
+
+            </div>
+
+            <div class="otro">
+                
+                <div class="otro__nombre">
+                    <label for="notro">28. Otro contacto de emergencia:</label>
+                    <input type="text" class="notro" id="notro" name="notro">
+                </div>
+
+                <div class="otro__parentesco">
+                    <label for="oparentesco">29. Parentesco:</label>
+                    <input type="text" class="oparentesco" id="oparentesco" name="oparentesco">
+                </div>
+
+                <div class="otro__telefono">
+                    <label for="otelefono">30. Número de Teléfono:</label>
+                    <input type="number" class="otelefono" id="otelefono" name="otelefono">
+                </div>
+
+            </div>
+        </fieldset>
+
+        <!-- Formulario de Datos sobre la salud -->
+
+
+        <fieldset class="formulario__datossalud">
+            <legend class="grupo__titulo">Antecedentes de Salud del Estudiante</legend>
+
+            <div class="salud">
+
+                <div class="salud__peso">
+                    <label for="speso">31. Peso</label>
+                    <input type="text" class="speso" id="speso" name="speso">
+                </div>
+
+                <div class="salud__estatura">
+                    <label for="sestatura">32. Estatura</label>
+                    <input type="text" class="sestatura" id="sestarura" name="sestatura">
+                </div>
+
+                <div class="salud__alergia">
+                    <label for="salergia">33. ¿Reacción alérgica ante algún animal, medicamento u objeto? </label>
+                    <input type="text" class="salergia" id="salergia" name="salergia">
+                </div>
+
+                <div class="salud__mencionalergia">
+                    <label for="smalergia">33.1. Mencionelas</label>
+                    <input type="text" class="smalergia" id="smalergia" name="smalergia">
+                </div>
+
+                <div class="salud__discapacidad">
+                    <label for="sdiscapacidad">34. ¿Tiene algún tipo de discapacidad </label>
+                    <input type="text" class="sdiscapacidad" id="sdiscapacidad" name="sdiscapacidad">
+                </div>
+
+                <div class="salud__menciondiscapacidad">
+                    <label for="smdiscapacidad">34.1. Mencionelas</label>
+                    <input type="text" class="smdiscapacidad" id="smdiscapacidad" name="smdiscapacidad">
+                </div>
+
+                <div class="salud__operado">
+                    <label for="soperado">35. ¿Ha sido operado(a)? </label>
+                    <input type="text" class="soperado" id="soperado" name="soperado">
+                </div>
+
+                <div class="salud__mencionoperado">
+                    <label for="smoperado">35.1. ¿De qué?</label>
+                    <input type="text" class="smoperado" id="smoperado" name="smoperado">
+                </div>
+
+                <div class="salud__enfermedades">
+                    <label for="senfermedad">36. ¿Tiene alguna(s) enfermedad(es) hereditaria(s)? </label>
+                    <input type="text" class="senfermedad" id="senfermedad" name="senfermedad">
+                </div>
+
+                <div class="salud__mencionenfermedad">
+                    <label for="smenfermedad">36.1 ¿Cuál(es)?</label>
+                    <input type="text" class="smenfermedad" id="smenfermedad" name="smenfermedad">
+                </div>
+
+                <div class="salud__tratamiento">
+                    <label for="stratamiento">37. ¿Está bajo algún(nos) tratamiento(s)? </label>
+                    <input type="text" class="stratamiento" id="stratamiento" name="stratamiento">
+                </div>
+
+                <div class="salud__menciontramiento">
+                    <label for="smtratamiento">37.1 ¿Cuál(es)?</label>
+                    <input type="text" class="smtratamiento" id="smtratamiento" name="smtratamiento">
+                </div>
+                
+                </div>
+
+            </div>
+
+        </fieldset>
+
+        <div class="enviard">
+            <input type="reset" value="Limpiar Campos" limpiar" class="limpiar">
+            <input type="submit" value="Enviar Datos" id="enviar" class="enviar">
+        </div>
+    </form>
+
+<!-- Modal para después del registro de estudiantes -->
+
+    <div id="modal" class="modal">
+        <div id="modal__ventana">
+            <img src="img/bien.png" alt="Imagen de Correcto" class="check">
+            <h1 class="ventana__titulo">¡Perfecto!</h1>
+            <h2 class="ventana__texto">El estudiante ha sido registrado en la base de datos. Haz clic en el botón volver para iniciar con un nuevo registro.</h2>
+            <button id="volver">Volver</button>
+        </div>
+    </div>
+
+
+    <div id="modalerror" class="modalerror">
+        <div id="modal__ventana">
+            <img src="img/error.png" alt="Imagen de Error" class="check">
+            <h1 class="ventana__titulo">¡Error!</h1>
+            <h2 class="ventana__texto">Parece que hay un campo que no has diligenciado y su información es obligatoria. Verifica y vuelve a intentar registrar al estudiante.</h2>
+            <button id="volvera">Volver</button>
+        </div>
+    </div>
+
+    
+    </main>
+
+</body>
+<script src="js/script.js"></script>
+</html>
