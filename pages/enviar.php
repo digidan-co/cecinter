@@ -12,5 +12,5 @@ $carta .= "Asunto: $asunto \n";
 $carta .= "Contenido: $contenido \n";
 
 mail($destinatario, $asunto, $carta);
-header('Location:index.html')
+header('Location:../index.html')
 ?>
