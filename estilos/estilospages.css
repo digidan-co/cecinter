@@ -195,6 +195,7 @@ body {
     top: 5.625em;
     justify-content: center;
     align-items: center;
+    z-index: 1;
 }
 
 .submenu__ul{
@@ -250,7 +251,7 @@ body {
     position: relative;
     padding: 1em 2em;
     border-radius: 0.8em;
-    z-index: -1;
+/*     z-index: -1; */
 }
 
 /* -----------Caracteristicas generales para cada página ---------------------*/
