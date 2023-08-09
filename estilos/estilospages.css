@@ -1,14 +1,13 @@
 :root {
-    --royal:rgb(14, 87, 160);
-    --celeste:rgb(60, 141, 223) ;
-    --plata:rgb(242, 242, 242);
-    --ambar:rgb(255, 248, 128);
-    --anaranjado:rgb(255, 176, 0);
-    --rojo:rgb(170, 0, 0);
-    --blanco:white;
-    --cafe:rgb(36, 31, 28);
+    --royal: rgb(14, 87, 160);
+    --celeste: rgb(60, 141, 223);
+    --plata: rgb(242, 242, 242);
+    --ambar: rgb(255, 248, 128);
+    --anaranjado: rgb(255, 176, 0);
+    --rojo: rgb(170, 0, 0);
+    --blanco: white;
+    --cafe: rgb(36, 31, 28);
 }
-
 
 * {
     margin: 0;
@@ -25,10 +24,10 @@ body {
 }
 
 .fondo {
-    height:100%;
+    height: 100%;
     width: 100%;
     position: fixed;
-    object-fit:cover;
+    object-fit: cover;
     z-index: -1;
 }
 
@@ -37,7 +36,7 @@ body {
     background-color: var(--royal);
     height: 5.625em;
     position: fixed;
-    top:0;
+    top: 0;
     border-bottom: 0.4375em solid var(--anaranjado);
     display: flex;
     align-items: center;
@@ -49,7 +48,7 @@ body {
     display: none;
 }
 
-.header__nav { 
+.header__nav {
     margin: 0 auto;
     max-width: 76em;
     width: 100%;
@@ -67,7 +66,7 @@ body {
     opacity: 0;
 }
 
-.nav__buscar{
+.nav__buscar {
     position: absolute;
     width: 1.4em;
     right: 0.5em;
@@ -77,18 +76,18 @@ body {
 /* Espacio del menú principal */
 
 .nav__ul {
-    display:flex;
+    display: flex;
     list-style: none;
 }
 
-.nav__ul>li {
+.nav__ul > li {
     padding: 0.3125em 0.9375em;
     margin: 0.3125em 0.625em;
     cursor: pointer;
     border-radius: 0.4375em;
 }
 
-.nav__ul>li:hover {
+.nav__ul > li:hover {
     background-color: var(--celeste);
     border-radius: 0.4375em;
     box-shadow: 0.1875em 0.1875em 0.1875em rgba(19, 19, 19, 0.24);
@@ -112,7 +111,7 @@ body {
 .nav__barra {
     font-family: DM sans;
     font-weight: 400;
-    color:grey;
+    color: grey;
     width: 15.625em;
     height: 2.5em;
     border-radius: 1.25em;
@@ -142,22 +141,22 @@ body {
     font-weight: 600;
 }
 
-.nav__entrar>.fi {
+.nav__entrar > .fi {
     color: var(--anaranjado);
     font-size: 1.2em;
     margin-top: 0.3125em;
-} 
+}
 
 /* Caracteristica de la barra de las Redes Sociales */
 
 .redes {
     position: fixed;
     z-index: 4;
-    right: 0.900em;
+    right: 0.9em;
     top: 35%;
 }
 
-.redes__lista>li {
+.redes__lista > li {
     list-style: none;
     width: 2em;
 }
@@ -176,17 +175,15 @@ body {
 .redes__lista {
     display: flex;
     flex-direction: column;
-    background-color:var(--royal);
+    background-color: var(--royal);
     padding: 0.5em;
     border-radius: 2em;
 }
 
-
 /* Características del Submenú */
 
-
 .submenu {
-    margin:auto;
+    margin: auto;
     width: 100%;
     height: 2.5em;
     display: flex;
@@ -198,7 +195,7 @@ body {
     z-index: 1;
 }
 
-.submenu__ul{
+.submenu__ul {
     display: flex;
     list-style: none;
     width: 75em;
@@ -218,15 +215,15 @@ body {
 /* Animación relleno a los enlaces del submenu */
 
 .submenu__a::after {
-    content:'';
+    content: '';
     width: 100%;
     height: 1.7em;
     border-radius: 0.3125em;
-    background-color:var(--royal);
+    background-color: var(--royal);
     position: absolute;
     left: 0;
     bottom: 0.25em;
-    transform:scale(0, 1);
+    transform: scale(0, 1);
     transition: transform 0.2s ease-out;
     z-index: -1;
 }
@@ -237,7 +234,7 @@ body {
     border: 3px solid var(--anaranjado);
 }
 
-.submenu__a:hover::after{
+.submenu__a:hover::after {
     transform: scale(1, 1);
 }
 
@@ -251,24 +248,23 @@ body {
     position: relative;
     padding: 1em 2em;
     border-radius: 0.8em;
-/*     z-index: -1; */
+    /*     z-index: -1; */
 }
 
 /* -----------Caracteristicas generales para cada página ---------------------*/
 
-
 /* Nuestro Personal */
 
-.docente{
+.docente {
     display: flex;
     margin: 0 auto;
-    padding:  0 1em;
+    padding: 0 1em;
     justify-content: space-between;
     align-items: center;
     border: solid 0.2em var(--plata);
     border-radius: 1em;
 }
-.docente__img{
+.docente__img {
     width: fit-content;
     border-radius: 50%;
     margin: 1em auto;
@@ -276,7 +272,7 @@ body {
     box-shadow: 1em 0.5em 1em rgba(19, 19, 19, 0.1);
 }
 
-.docente__perfil{
+.docente__perfil {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -286,7 +282,7 @@ body {
     width: 100%;
 }
 
-.docente__nombre{
+.docente__nombre {
     font-size: 3em;
     color: var(--rojo);
 }
@@ -321,7 +317,7 @@ body {
 .fundamentos__subtitulo,
 .mconvivencia__subtitulo {
     color: var(--anaranjado);
-    text-transform:capitalize;
+    text-transform: capitalize;
     font-weight: 600;
     font-size: 2em;
 }
@@ -334,7 +330,7 @@ body {
 
 .principios ol li,
 .fundamentos ol li {
-    list-style-type:upper-latin;
+    list-style-type: upper-latin;
     padding-top: 1em;
     margin-left: 1em;
     list-style-position: inside;
@@ -353,19 +349,6 @@ body {
 
 /* Termina Normatividad */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* Página en construcción */
 
 .no-page {
@@ -377,7 +360,6 @@ body {
     align-items: center;
     justify-content: center;
 }
-
 
 /* Caracteristicas del Footer */
 
@@ -416,12 +398,9 @@ body {
 
 /* Aquí terminan las caracteristicas generales para cada página */
 
-
-
 /* Responsive Web */
 
-@media screen and (max-width:1080px){
-   
+@media screen and (max-width: 1080px) {
     .fondo,
     .portada {
         display: none;
@@ -438,10 +417,9 @@ body {
     }
 
     /* Responsive - Nuestro Personal */
-
 }
 
-@media screen and (max-width:960px){
+@media screen and (max-width: 960px) {
     .nav,
     .degradado {
         display: none;
@@ -456,7 +434,7 @@ body {
     }
 
     .submenu {
-        position:fixed;
+        position: fixed;
         right: 100%;
         top: -1em;
         z-index: 2;
@@ -464,7 +442,7 @@ body {
         transition: all ease 0.5s;
     }
 
-    .toggle-activo{
+    .toggle-activo {
         right: 0;
     }
 
@@ -474,7 +452,7 @@ body {
         font-size: 2em;
     }
 
-    .submenu__ul li{
+    .submenu__ul li {
         margin: 0.2em;
     }
 
@@ -528,11 +506,9 @@ body {
         width: 80%;
         margin: auto;
     }
-
 }
 
-@media screen and (max-width:500px){
-
+@media screen and (max-width: 500px) {
     /* Responsive General*/
 
     .header__enlace,
@@ -560,13 +536,13 @@ body {
         height: 32em;
     }
 
-/* Responsive para Nuestra Personal */
+    /* Responsive para Nuestra Personal */
 
     .docente__nombre {
         margin-top: 0;
     }
 
-/* Responsive para Normatividad */
+    /* Responsive para Normatividad */
 
     .contnormatividad {
         width: 100%;
@@ -589,6 +565,45 @@ body {
         padding: 1em 0;
         font-size: 1.2em;
     }
+}
 
+/* Espacio para las validaciones*/
 
+.prom-mensaje {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    background-color: var(--royal);
+    width: 100vh;
+    height: 100vh;
+}
+
+.prom-autorizacion {
+    background-color: var(--plata);
+    text-align: center;
+    font-size: 7vw;
+    width: 100vw;
+    border-bottom-color: var(--ambar);
+    border-bottom-style: solid;
+    border-bottom-width: 5px;
+    margin-bottom: 1em;
+}
+
+.prom-estudiante {
+    text-align: center;
+    width: 100vw;
+    font-size: 2em;
+    color: var(--plata);
+}
+
+.prom-descripcion {
+    color: var(--celeste);
+    width: 100vw;
+    text-align: center;
+}
+
+.prom-mensaje > img {
+    width: 100vw;
+    padding: 1em;
 }
