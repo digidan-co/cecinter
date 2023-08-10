@@ -575,14 +575,14 @@ body {
     justify-content: center;
     align-content: center;
     background-color: var(--royal);
-    width: 100vh;
+    width: 100vw;
     height: 100vh;
 }
 
 .prom-autorizacion {
     background-color: var(--plata);
     text-align: center;
-    font-size: 7vw;
+    font-size: 2em;
     width: 100vw;
     border-bottom-color: var(--ambar);
     border-bottom-style: solid;
@@ -606,4 +606,6 @@ body {
 .prom-mensaje > img {
     width: 100vw;
     padding: 1em;
+    max-width: 35em;
+    margin: auto;
 }
